@@ -1,0 +1,221 @@
+/* -----------Button----------- */
+
+.border-button {
+  text-decoration: none;
+  display: inline-block;
+  padding: 20px 30px;
+  position: absolute;
+  top: 330px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 100;
+  color: white;
+  border: 1px solid rgba(255, 255, 255, .4);
+  background: none;
+  font-weight: 300;
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.border-button:before, .border-button:after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  opacity: 0;
+  box-sizing: border-box;
+}
+
+.border-button:before {
+  bottom: 0;
+  left: 0;
+  border-left: 1px solid white;
+  border-top: 1px solid white;
+  transition: 0s ease opacity .8s, .2s ease width .4s, .2s ease height .6s;
+}
+
+.border-button:after {
+  top: 0;
+  right: 0;
+  border-right: 1px solid white;
+  border-bottom: 1px solid white;
+  transition: 0s ease opacity .4s, .2s ease width, .2s ease height .2s;
+}
+
+.border-button:hover:before, .border-button:hover:after {
+  height: 100%;
+  width: 100%;
+  opacity: 1;
+}
+
+.border-button:hover:before {
+  transition: 0s ease opacity 0s, .2s ease height, .2s ease width .2s;
+}
+
+.border-button:hover:after {
+  transition: 0s ease opacity .4s, .2s ease height .4s, .2s ease width .6s;
+}
+
+.border-button:hover {
+  background: rgba(255, 255, 255, .2);
+}
+
+/* -----------Post block----------- */
+
+.about_me {
+  width: 100%;
+  max-width: 1500px;
+  margin: 50px auto 200px;
+  padding: 0 15px;
+}
+
+.about_me .post-image img {
+  width: 100%;
+  margin: 0 0 20px 0;
+}
+
+.about_me .post-content p {
+  line-height: 1.5;
+  margin-bottom: 1em;
+  font-size: 23px;
+  text-align: justify;
+}
+
+@media (min-width: 768px) {
+  .about_me {
+    padding: 0 45px;
+  }
+  .about_me .post-image img {
+    float: right;
+    width: 300px;
+    margin: 0 0 20px 20px;
+  }
+  .about_me .post-header {
+    padding-left: 26px;
+    border-left: 4px solid #D8D8D8;
+    margin-left: -30px;
+  }
+}
+
+/* -----------contacts----------- */
+
+.contacts {
+  height: 100%;
+  max-width: 1200px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  margin: 0 auto 90px auto;
+}
+
+.contacts .item {
+  display: flex;
+  flex-direction: column;
+}
+
+.contacts .item .text {
+  margin-bottom: 4px;
+  color: #595E63;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.contacts .item .email {
+  color: #343A41;
+  font-weight: 800;
+}
+
+@media screen and (max-width: 955px) {
+  .contacts {
+    flex-direction: column;
+  }
+  .contacts .item {
+    flex-direction: column;
+    margin: 10px auto;
+    align-items: center;
+  }
+  .contacts .item .text {
+    text-align: center;
+    max-width: 300px;
+  }
+}
+
+/* ----------------PROMO------------------- */
+
+.promo_wrap {
+  margin: 0 auto;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding-left: 32px;
+  padding-right: 32px;
+  max-width: 1128px;
+  margin-top: 30px;
+}
+
+.item_promo {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  max-width: 328px;
+  margin-bottom: 20px;
+}
+
+.item_promo .name{
+  min-width: 60px;
+  min-height: 40px;
+  max-width: 60px;
+  max-height: 40px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 600;
+  line-height: 25px;
+  color: white;
+  font-size: 18px;
+  margin-right: 12px;
+}
+
+.item_promo .description {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.item_promo .description .title {
+  font-size: 15px;
+  line-height: 21px;
+  margin-bottom: 8px;
+}
+
+.item_promo .description .text {
+  font-size: 13px;
+  line-height: 18px;
+}
+
+.promo_color_blue {
+  background-color: rgb(0, 112, 240);
+  background-image: linear-gradient(31.1deg, rgb(0, 112, 240) 4.52%, rgb(0, 202, 240) 100%);
+}
+
+.promo_color_green {
+  background-color: rgb(14, 187, 78);
+  background-image: linear-gradient(31.1deg, rgb(14, 187, 78) 4.52%, rgb(156, 230, 39) 100%);
+}
+
+@media screen and (max-width: 720px) {
+  .promo_wrap  {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .item_promo {
+      margin-bottom: 50px;
+  }
+
+} 

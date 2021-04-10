@@ -1,0 +1,126 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  width: 100%;
+}
+
+nav {
+  background-color: rgba(0, 0, 0, 0.322);
+  position: fixed;
+  z-index: 100;
+  display: none;
+}
+
+.slider_top {
+  margin-bottom: 50px;
+}
+
+.carousel_sertificat .carousel-item {
+  color: rgb(26, 26, 26);
+  text-align: center;
+}
+
+.carousel_sertificat .carousel-item, .carousel_sertificat .carousel-item img {
+  width: 100%;
+  max-width: 500px;
+  height: 300px;
+}
+
+.slide_navigation {
+  display: flex;
+  justify-content: center;
+  margin: 40px auto;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.slide_navigation i {
+  cursor: pointer;
+  margin: 0 10px;
+  font-size: 30px;
+  transition: 0.5s;
+  border-radius: 50%;
+}
+
+.slide_navigation i:hover {
+  background-color: rgba(102, 102, 102, 0.562);
+}
+
+.parallax-container {
+  height: 200px;
+}
+
+.cards_massages {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5px;
+  max-width: 1000px;
+  margin: 0 auto 50px;
+}
+
+.cards_massages .card .card-image span {
+  background-color: rgba(0, 0, 0, 0.356)
+}
+
+.cards_massages .card .card-action {
+  border-top: 0px;
+}
+
+.process_text {
+  max-width: 1300px;
+  margin: 0 auto;
+  font-size: 20px;
+  text-align: justify;
+  padding: 0px 10px;
+  margin-bottom: 90px;
+}
+
+.table_wrap {
+  width: 100%;
+  max-width: 1200px;
+  margin: 30px auto 60px;
+  overflow-x: auto;
+}
+
+td img {
+  width: 50px;
+  height: 50px;
+}
+
+td .item_promo .name {
+  min-width: 45px;
+  min-height: 30px;
+}
+
+.old_price {
+  text-decoration: line-through red;
+}
+.new_price {
+  font-size: 20px;
+}
+
+@media screen and (max-width: 540px) {
+  h2 {
+    font-size: 30px;
+  }
+  .carousel_sertificat {
+    height: 300px;
+  }
+  .carousel_sertificat .carousel-item, .carousel_sertificat .carousel-item img {
+    max-width: 250px;
+    height: 150px;
+  }
+  .about_me .post-content p, .process_text {
+    font-size: 16px !important;
+  }
+  .cards_massages {
+    grid-template-columns: 1fr;
+    gap: 0px;
+  }
+}
